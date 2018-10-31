@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - mrdatamapper.akademiano_prepare_zabbix_agent

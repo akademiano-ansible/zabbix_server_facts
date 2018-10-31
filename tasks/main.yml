@@ -1,0 +1,14 @@
+---
+- name: gather facts from zabbix servers
+  setup:
+    gather_subset:
+      - '!all'
+      - '!min'
+      - network
+  delegate_to: "{{groups[zabbix_server_group][0]}}"
+  delegate_facts: True
+
+- name: set zabbix server address register
+  set_fact:
+    zabbix_server_network_address: "{{ hostvars[groups[zabbix_server_group][0]][zabbix_server_network_interface][zabbix_server_network_address_family]['address'] }}"
+    cacheable: true
