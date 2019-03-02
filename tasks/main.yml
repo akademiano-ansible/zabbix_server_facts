@@ -1,5 +1,5 @@
 ---
-- name: gather facts from zabbix servers
+- name: gather facts from zabbix server
   setup:
     gather_subset:
       - '!all'
