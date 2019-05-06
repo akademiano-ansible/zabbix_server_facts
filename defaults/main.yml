@@ -1,4 +1,4 @@
 ---
-zabbix_server_group: ZabbixServer
+zabbix_server_group: ZabbixServers
 zabbix_server_network_interface: ansible_eth0
 zabbix_server_network_address_family: ipv4
